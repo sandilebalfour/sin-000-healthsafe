@@ -1,65 +1,26 @@
 package co.wethinkcode.healthsafe;
 
-import java.io.InputStream;
 
 public class WardRecord {
+    public String wardId;
+    public String wing;
+    public String department;
+    public Integer bedsAvailable;
+    public String notes;
 
-    private String wardId;
-    private String wing;
-    private String department;
-    private String  bedsAvailable;
-    private String notes;
+    // keep original for duplicate debugging
+    public transient String rawLine;
 
-    public WardRecord(String wardId, String wing, String department, String  bedsAvailable) {
-
+    public WardRecord(String wardId, String wing, String department, Integer bedsAvailable, String notes) {
         this.wardId = wardId;
-        if(wing.isEmpty()) throw new IllegalArgumentException("");
         this.wing = wing;
         this.department = department;
         this.bedsAvailable = bedsAvailable;
-    }
-
-    public String getWardId() {
-        return wardId;
-    }
-
-    public void setWardId(String wardId) {
-        this.wardId = wardId;
-    }
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
-    public String getWing() {
-        return wing;
-    }
-
-    public void setWing(String wing) {
-        this.wing = wing;
-    }
-
-    public String getBedsAvailable() {
-        return bedsAvailable;
-    }
-
-    public void setBedsAvailable(String bedsAvailable) {
-        this.bedsAvailable = bedsAvailable;
+        this.notes = notes;
     }
 
     @Override
     public String toString() {
-        return "WardRecord{" +
-                "wardId:'" + wardId + '\'' +
-                ", wing:'" + wing + '\'' +
-                ", department:'" + department + '\'' +
-                ", bedsAvailable:" + bedsAvailable +
-                ", notes:'" + notes + '\'' +
-                '}';
+        return wardId + " | " + wing + " | " + department + " | " + bedsAvailable + " | " + notes;
     }
-
 }

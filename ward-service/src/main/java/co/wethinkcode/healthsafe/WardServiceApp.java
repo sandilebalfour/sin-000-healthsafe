@@ -32,7 +32,7 @@ public class WardServiceApp {
             if (ward == null) { ctx.status(404).result("Unknown ward"); return; }
             String msg = ctx.body().isEmpty()? "Equipment failure in " + ward.wardId : ctx.body();
             queuePublisher.publish(msg);
-            ctx.result("Queued failure for " + ward.wardId);
+            ctx.result("Queued failure for ward: " + ward.wardId);
         });
     }
 }

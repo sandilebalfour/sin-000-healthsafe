@@ -39,7 +39,7 @@ public class EquipmentAlertServiceApp {
                     String text = ((TextMessage) message).getText();
                     alerts.add(text);
                     System.out.println("[ALERT RECEIVED] " + text);
-                    // TODO: here you would page on-call, write to DB, etc..
+
                 }
             } catch (JMSException e) {
                 e.printStackTrace();

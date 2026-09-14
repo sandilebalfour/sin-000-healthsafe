@@ -42,6 +42,9 @@ No automated tests yet. Manually verify it's up:
 
 ```
 curl http://localhost:7031/health   # -> OK
+curl http://localhost:7031/wards # -> Gets all wards as json
+curl http://localhost:7031/wards/{id} -> gets ward by id
+curl -X POST http://localhost:7031/wards/W-05/equipment-failure -d "final check" -> Queued failure for ward id.
 ```
 
 To add real tests, add JUnit 5 + the Surefire plugin to `pom.xml`, put tests under

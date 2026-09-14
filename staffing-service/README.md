@@ -45,6 +45,15 @@ No automated tests yet. Manually verify it's up:
 
 ```
 curl http://localhost:7033/health   # -> OK
+
+checks current emergency level and then set staff based on the level.
+curl http;//localhost:7033/staffing/W-02 # -> e.g 
+{
+    "wardId": "W-02",
+    "emergencyLevel": 5,
+    "code": "AMBER",
+    "doctorsOnCall": 4
+}
 ```
 
 To add real tests, add JUnit 5 + the Surefire plugin to `pom.xml`, put tests under

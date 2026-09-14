@@ -56,6 +56,8 @@ No automated tests yet. Manually verify it's up:
 
 ```
 curl http://localhost:7034/health   # -> OK
+curl http://localhost:7034/alerts # -> returns all alerts
+curl http://localhost:7034/alerts/count -> returns the number of alerts.
 ```
 
 To add real tests, add JUnit 5 + the Surefire plugin to `pom.xml`, put tests under

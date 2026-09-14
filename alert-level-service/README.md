@@ -39,6 +39,8 @@ No automated tests yet. Manually verify it's up:
 
 ```
 curl http://localhost:7032/health   # -> OK
+curl http://localhost:7032/alert-level/{level} #POST -> sends new level/changes level
+curl http://localhost:7032/alert-level #Get -> return current level/
 ```
 
 To add real tests, add JUnit 5 + the Surefire plugin to `pom.xml`, put tests under

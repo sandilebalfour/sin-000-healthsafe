@@ -89,6 +89,8 @@ No automated tests yet. Manually verify it's up:
 
 ```
 curl http://localhost:7030/health   # -> OK
+curl http://localhost:7030/wards -> returns all wards cleaned.
+curl http://localhost:7030/wards/{id} -> returns ward by ID.
 ```
 
 To add real tests, add JUnit 5 + the Surefire plugin to `pom.xml`, put tests under

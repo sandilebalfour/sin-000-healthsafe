@@ -61,4 +61,4 @@ curl http://localhost:7034/alerts/count -> returns the number of alerts.
 ```
 
 To add real tests, add JUnit 5 + the Surefire plugin to `pom.xml`, put tests under
-`src/test/java/co/wethinkcode/healthsafe/`, and run `mvn test`.
+`../ingestion-service/src/test`, and run `mvn test`.
